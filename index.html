@@ -43,16 +43,16 @@ li {
     height: 4146px;
   }
   
-    #black-background {
-    width: 1200px;
-    height: 4266px;
+    #heading {
     background-color: black;
     position: absolute;
     top: 0;
     left: 120px;
+    width: 1200px;
+    height: 120px;
   }
   
-  .white-background {
+  .background {
     width: 1200px;
     height: 2700px;
     background-color: white;
@@ -60,6 +60,17 @@ li {
     top: 120px;
     left: 120px
   }
+  
+  #black-background {
+    background-color: black;
+    position: absolute;
+    top: 2800px;
+    left: 120px;
+    width: 1200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+}
   
   .cursive-accent {
     color: white;
@@ -109,6 +120,36 @@ li {
 .column-right {
     /* Acts as container for text*/
 }
+  
+.accordion {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  padding: 40px;
+  padding-left: 200px;
+  width: 100%;
+  border: 10px;
+  outline: 10px;
+  font-size: 32px;
+  font-family: "Instrument Sans", sans-serif;
+  transition: 0.4s;
+}
+  
+.panel {
+  padding-left: 270px;
+  width: 750px;
+  display: none; 
+  color: white;
+  font-size: 24px;
+  font-family: "Instrument Sans", sans-serif;
+  overflow: hidden;
+  }
+
+.accordion.active + .panel {
+   
+}
+  
 h1 {
   color: white;
   font-size: 50px;
@@ -159,7 +200,7 @@ h3 {
 </head>
 <body>
   
-  <div id="black-background">
+  <div id="heading">
     <img src="X logo.png" alt="white cursive x" width="81px" height="81px" class="xlogo">
     
     <nav>
@@ -172,7 +213,7 @@ h3 {
       </nav>
     </div>
   
-  <div class="white-background">
+  <div class="background">
     <img src="Intro image.png" alt="black and white, blurry image, of Xavier Petrie" width="1200px" height="740px">
     
     <h1 id="intro-heading"> <p>“I design with purpose. Crafting experiences</p> that honour identity and inspire growth."</h1> 
@@ -213,6 +254,60 @@ h3 {
       </div>
     </div>
     
+   <div id="black-background">
+     
+      <h1>Skills + Qualifications</h1>
+  
+    <button class="accordion">Adobe Creative Cloud Suite</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Business Management Experience</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">UX/UI Design & Design Thinking</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+     
+<button class="accordion">Bachelor of Global Business & Digital Design | 2029</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+     
+<button class="accordion">Adobe Creative Cloud Suite</button>
+<div class="panel">
+  <p>Developed and executed social media campaigns that increased engagement and brand visibility across Instagram and Tik Tok.</p>
+</div>
+     
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    
+    // Toggling the 'active' class is still useful for button styling
+    this.classList.toggle("active"); 
+    
+    var panel = this.nextElementSibling;
+    
+    // SIMPLE LOGIC: Directly toggle the inline display style
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+  </div> 
+  
+  
+  
   <div id="intro-cursive">Xavier Petrie</div>
 </body>
 </html>
