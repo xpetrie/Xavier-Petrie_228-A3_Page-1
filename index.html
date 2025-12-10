@@ -9,10 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Kapakana:wght@300..400&display=swap" rel="stylesheet">  
-
 <style>
-  
-  ul {
+
+ul {
   margin: 0;
   padding: 0;
   text-align: right;
@@ -27,7 +26,7 @@ li {
   font-family: "Instrument Sans", sans-serif;
   } 
   
-  a {
+a {
   color: white;
   text-decoration: none; 
   }
@@ -297,7 +296,7 @@ h3 {
             <p>Contact</p>
           </div>
         <div id="email">
-            <p>petrie1437@gmail.com</p>
+            <p>xpetrie@uwaterloo.ca</p>
           </div>
         <div id="dash">
             <p>-</p>
@@ -355,12 +354,10 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     
-    // Toggling the 'active' class is still useful for button styling
     this.classList.toggle("active"); 
     
     var panel = this.nextElementSibling;
     
-    // SIMPLE LOGIC: Directly toggle the inline display style
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
